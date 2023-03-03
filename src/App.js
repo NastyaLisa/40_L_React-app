@@ -37,7 +37,7 @@ const UA = {
   current_lang: "UA",
 };
 
-function App() {
+const App = () => {
   const [isShow, setIsShow] = useState(false);
 
   const toggleArticle = () => {

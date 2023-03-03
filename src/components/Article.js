@@ -2,12 +2,12 @@ import React from "react";
 import ArticleAuthor from "./ArticleAuthor";
 import ArticleBody from "./ArticleBody";
 
-function Article(props) {
+const Article = ({children, show, lang, isRead}) =>{
   return (
     <>
-      {props.children}
-      <ArticleBody show={props.show} lang={props.lang} isRead={props.isRead} />
-      <ArticleAuthor lang={props.lang} />
+      {children}
+      <ArticleBody show={show} lang={lang} isRead={isRead} />
+      <ArticleAuthor lang={lang} />
     </>
   );
 }

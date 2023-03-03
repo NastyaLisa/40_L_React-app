@@ -1,11 +1,11 @@
 import React from "react";
 
-function ArticleAuthor(props) {
+const ArticleAuthor = ({lang}) => {
   return (
     <div className="article__author">
-      <p className="article__author--name">{props.lang.author}</p>
-      <p className="article__author--date">{props.lang.published}</p>
-      <p className="article__author--theme">{props.lang.theme}</p>
+      <p className="article__author--name">{lang.author}</p>
+      <p className="article__author--date">{lang.published}</p>
+      <p className="article__author--theme">{lang.theme}</p>
     </div>
   );
 }
