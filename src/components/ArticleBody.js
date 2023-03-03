@@ -13,3 +13,4 @@ const  ArticleBody = ({show, isRead,lang}) => {
   );
 }
 export default ArticleBody;
+

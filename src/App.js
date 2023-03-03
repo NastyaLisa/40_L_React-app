@@ -41,16 +41,16 @@ const App = () => {
   const [isShow, setIsShow] = useState(false);
 
   const toggleArticle = () => {
-    isShow ? setIsShow(false) : setIsShow(true);
+    setIsShow(!isShow);
   };
 
   const [isRead, setIsRead] = useState(false);
   const markAsRead = () => {
-    setIsRead(true);
+    setIsRead((prevIsRead) => !prevIsRead);
   };
 
   const markAsUnread = () => {
-    setIsRead(false);
+    setIsRead((prevIsRead) => !prevIsRead);
   };
 
   const [currentLang, setCurrentLang] = useState("EN");
@@ -80,13 +80,13 @@ const App = () => {
       <div className="lang">
         <button
           onClick={() => setCurrentLang("UA")}
-          className={`${currentLang === "UA" ? "active" : ""} lang-btn`}
+          className={`${currentLang === "UA" && "active"} lang-btn`}
         >
           UA
         </button>
         <button
           onClick={() => setCurrentLang("EN")}
-          className={`${currentLang === "EN" ? "active" : ""} lang-btn`}
+          className={`${currentLang === "EN" && "active"} lang-btn`}
         >
           EN
         </button>
