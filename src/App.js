@@ -41,12 +41,12 @@ const App = () => {
   const [isShow, setIsShow] = useState(false);
 
   const toggleArticle = () => {
-    setIsShow(!isShow);
+    setIsShow(true);
   };
 
   const [isRead, setIsRead] = useState(false);
   const markAsRead = () => {
-    setIsRead((prevIsRead) => !prevIsRead);
+    setIsRead(true);
   };
 
   const markAsUnread = () => {
