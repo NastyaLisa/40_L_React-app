@@ -2,7 +2,7 @@ import React from "react";
 
 const  ArticleBody = ({show, isRead,lang}) => {
   return (
-    <div className={`article__body ${isRead ? "read" : "unread"}`}>
+    <div className={`article__body ${isRead ? "read" : ""}`}>
       <h3 className="article__description">
         {!show && lang.description}
       </h3>

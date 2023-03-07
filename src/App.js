@@ -40,19 +40,22 @@ const UA = {
 const App = () => {
   const [isShow, setIsShow] = useState(false);
 
-  const toggleArticle = () => {
-    setIsShow(true);
-  };
-
   const [isRead, setIsRead] = useState(false);
   const markAsRead = () => {
     setIsRead(true);
+    setIsUnread(true);
   };
 
+  const [isUnread, setIsUnread] = useState(false);
   const markAsUnread = () => {
-    setIsRead((prevIsRead) => !prevIsRead);
+    setIsUnread(false);
+    setIsRead(false);
   };
 
+  const toggleArticle = () => {
+    setIsShow((prevState) => !prevState);
+    setIsRead(isShow === true && isUnread === true ? true : false);
+  };
   const [currentLang, setCurrentLang] = useState("EN");
   const lang = currentLang === "EN" ? EN : UA;
 
@@ -93,5 +96,5 @@ const App = () => {
       </div>
     </div>
   );
-}
+};
 export default App;
