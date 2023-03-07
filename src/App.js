@@ -43,18 +43,15 @@ const App = () => {
   const [isRead, setIsRead] = useState(false);
   const markAsRead = () => {
     setIsRead(true);
-    setIsUnread(true);
   };
 
-  const [isUnread, setIsUnread] = useState(false);
   const markAsUnread = () => {
-    setIsUnread(false);
     setIsRead(false);
   };
 
   const toggleArticle = () => {
     setIsShow((prevState) => !prevState);
-    setIsRead(isShow === true && isUnread === true ? true : false);
+    setIsRead(isShow === true && !isRead === true ? true : false);
   };
   const [currentLang, setCurrentLang] = useState("EN");
   const lang = currentLang === "EN" ? EN : UA;
